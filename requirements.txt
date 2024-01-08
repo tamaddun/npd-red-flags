@@ -1,5 +1,4 @@
 dash==2.14.2
 dataretrieval==1.0.6
 plotly==5.9.0
-calendar
 pandas
