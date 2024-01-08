@@ -1,14 +1,10 @@
 # Importing necessary libraries
-# import os
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objs as go
 from dash import Dash, html, dcc, Output, Input, State, dash_table
 from dataretrieval import nwis
 import calendar
-
-# # set the https_proxy environment variable to avoid disconnecting the VPN
-# os.environ['https_proxy'] = 'http://proxy01.pnl.gov:3128'
 
 # Function to fetch and process data from USGS using NWIS
 def fetch_usgs_data(site_no, start_date, end_date):
@@ -48,6 +44,7 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 # Initializing the Dash app with a more modern look
 app = Dash(__name__, external_stylesheets=['https://codepen.io/chriddyp/pen/dZVMbK.css'], suppress_callback_exceptions=True)
+server = app.server
 
 # Styling variables for plots
 plot_style = {'height': '400px', 'width': '600px'}
